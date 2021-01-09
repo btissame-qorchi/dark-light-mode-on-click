@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
-:root {
-  --bodyBg: #e4e4e4;
-  --color: #000;
-  --containerBg: #fff;
-}
+
 body,
 html {
   height: 100%;
@@ -19,7 +15,7 @@ body {
   -ms-transition: all 400ms ease;
   -o-transition: all 400ms ease;
   transition: all 400ms ease;
-  background-color: var(--bodyBg);
+  background-color: #e4e4e4;
 }
 
 header {
@@ -32,7 +28,7 @@ nav {
 }
 
 nav a {
-  color: var(--color);
+  color: #000;
   text-decoration: none;
 }
 
@@ -73,7 +69,7 @@ div.container {
   padding: 40px;
   max-width: 1000px;
   margin: auto;
-  background-color: var(--containerBg);
+  background-color: #fff;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -83,7 +79,7 @@ div.container {
 
 div.container h1 {
   display: inline-block;
-  color: var(--color);
+  color: #000;
   background-image: linear-gradient(
     to bottom,
     transparent 0%,
@@ -95,7 +91,7 @@ div.container h1 {
 div.container p {
   font-size: 15px;
   line-height: 24px;
-  color: var(--color);
+  color: #000;
 }
 
 div.container .text {
@@ -173,5 +169,41 @@ div.container .img img {
   }
   body.nav-open nav ul.menu {
     right: 0;
+  }
+}
+/* Dark/Light mode code */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000;
+  }
+  div.container {
+    background-color: #353535;
+  }
+  div.container p {
+    color: #e4e4e4;
+  }
+  div.container h1 {
+    color: #e4e4e4;
+  }
+  nav a {
+    color: #e4e4e4;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #e4e4e4;
+  }
+  div.container {
+    background-color: #fff;
+  }
+  div.container p {
+    color: #000;
+  }
+  div.container h1 {
+    color: #000;
+  }
+  nav a {
+    color: #000;
   }
 }
