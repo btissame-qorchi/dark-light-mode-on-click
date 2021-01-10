@@ -36,5 +36,9 @@ $(document).ready(function(){
 
 
   //Dark/Light mode code
+  $('nav .switch').click(function(){
+      $(this).find('i').toggle();
+      $('body').toggleClass('dark_mode');
+  })
 
 });

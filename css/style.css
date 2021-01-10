@@ -46,6 +46,7 @@ nav ul.menu {
   padding: 0;
   list-style-type: none;
   letter-spacing: -4px;
+  padding-right: 60px;
 }
 
 nav ul.menu li.menu-item {
@@ -64,7 +65,15 @@ nav a.mobile-menu {
   padding: 10px;
   margin-right: 25px;
 }
-
+nav .switch {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  cursor: pointer;
+}
+nav .switch .fa-sun-o {
+  display: none;
+}
 div.container {
   padding: 40px;
   max-width: 1000px;
@@ -172,38 +181,22 @@ div.container .img img {
   }
 }
 /* Dark/Light mode code */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #000;
-  }
-  div.container {
-    background-color: #353535;
-  }
-  div.container p {
-    color: #e4e4e4;
-  }
-  div.container h1 {
-    color: #e4e4e4;
-  }
-  nav a {
-    color: #e4e4e4;
-  }
-}
 
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: #e4e4e4;
-  }
-  div.container {
-    background-color: #fff;
-  }
-  div.container p {
-    color: #000;
-  }
-  div.container h1 {
-    color: #000;
-  }
-  nav a {
-    color: #000;
-  }
+body.dark_mode {
+  background-color: #000;
+}
+.dark_mode div.container {
+  background-color: #353535;
+}
+.dark_mode div.container p {
+  color: #e4e4e4;
+}
+.dark_mode div.container h1 {
+  color: #e4e4e4;
+}
+.dark_mode nav a {
+  color: #e4e4e4;
+}
+.dark_mode .switch i {
+  color: #e4e4e4;
 }
